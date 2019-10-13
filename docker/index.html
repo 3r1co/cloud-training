@@ -1,0 +1,493 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>Docker Lab - ISEN Cloud Awareness Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#docker-lab-30-minutes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="ISEN Cloud Awareness Training" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              ISEN Cloud Awareness Training
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Docker Lab
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="ISEN Cloud Awareness Training" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    ISEN Cloud Awareness Training
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../prerequisites/" title="Prerequisites" class="md-nav__link">
+      Prerequisites
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Docker Lab
+      </label>
+    
+    <a href="./" title="Docker Lab" class="md-nav__link md-nav__link--active">
+      Docker Lab
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#follow-up-exercise-30-minutes" class="md-nav__link">
+    Follow up exercise (30 Minutes)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/" title="Kubernetes Lab" class="md-nav__link">
+      Kubernetes Lab
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-architecture/" title="Cloud Architecture Exercise" class="md-nav__link">
+      Cloud Architecture Exercise
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="Getting Started with AWS" class="md-nav__link">
+      Getting Started with AWS
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#follow-up-exercise-30-minutes" class="md-nav__link">
+    Follow up exercise (30 Minutes)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="docker-lab-30-minutes">Docker Lab (30 Minutes)</h1>
+<p>The goal of this exercise is to build your first Docker container.
+At the end of the lab, you should have</p>
+<ul>
+<li>a functioning web server based on Node.JS</li>
+<li>packaged this web server in a Docker image</li>
+<li>a running a Docker container that you can access from your workstation</li>
+</ul>
+<p>To perform this lab:</p>
+<ol>
+<li>
+<p>Verify that you can log in to the global Docker Registry:  </p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">login</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Create a directory for this training on your Desktop (e.g. "CloudAwarenessLab"). Download the following files in this directory:</p>
+<ul>
+<li><a href="../files/docker/Dockerfile">Dockerfile</a> (the file to build the Docker image)</li>
+<li><a href="../files/docker/app.js">app.js</a> (the application source code)</li>
+</ul>
+</li>
+<li>
+<p>In your terminal, position yourself in the directory:</p>
+<div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="k">c</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="o">&lt;</span><span class="n">loginldap</span><span class="o">&gt;</span><span class="err">\</span><span class="n">Desktop</span><span class="err">\</span><span class="n">CloudAwarenessLab</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Open the previously downloaded file "Dockerfile" in an editor:</p>
+<ul>
+<li>the first line states <code>FROM alpine:3.10</code><ul>
+<li>In case you wouldn't specify a tag (:3.10), Docker will default to "latest". It is a common best-practice to always specify a tag when referencing to an image.</li>
+</ul>
+</li>
+<li>you'll also see one line stating <code>ADD app.js /usr/local/bin</code><ul>
+<li>In this step the source code of your Node.JS server is added into <code>/usr/local/bin/</code> directory</li>
+</ul>
+</li>
+<li>you'll also a line with the statement <code>ENTRYPOINT</code>. The entrypoint is the command that is run on your Docker container with the it is launched with the <code>docker run</code> command.</li>
+</ul>
+</li>
+<li>
+<p>Launch the image build process:  </p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">mywebserver</span><span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="p">.</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>The Docker Engine has now built a new Docker image and you can find it in your local registry. To do so, type the following in your terminal:  </p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">images</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Run the previously built image:  </p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="c1">--rm -p 3000:3000 mywebserver:1.0</span>
+</pre></div>
+
+
+<p>The id of the container is returned. The container is started in the background.</p>
+<p><strong>Notes on the parameters:</strong>  </p>
+<ul>
+<li>"<strong>-d</strong>" instructs Docker to run the container as a daemon, so in the background</li>
+<li>"<strong>--rm</strong>" instructs Docker to delete the container ones it is stopped. Like that, the local registry will not be poluted with "intermediate" containers</li>
+<li>"<strong>-p 3000:3000</strong>" instructs Docker to expose the containers port 3000 on port 3000 on the host (<strong>Attention</strong>: in our case, the host is the Minikube VM)</li>
+</ul>
+</li>
+<li>
+<p>You can check the logs of your running container with:  </p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">logs</span> <span class="o">&lt;</span><span class="n">id</span> <span class="k">of</span> <span class="n">the</span> <span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>Your container is running in the VM created by Minikube. As you exposed the port 3000 in the previous step, we now need to find the IP address if your Minikube VM:  </p>
+<div class="codehilite"><pre><span></span><span class="n">minikube</span> <span class="n">ip</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>In your browser, open <a href="http://&lt;minikube-ip&gt;:3000">http://minikube-ip:3000</a>.<br />
+   You should see "Hello World" now.</p>
+</li>
+<li>
+<p>Once you are satisfied with the result, you can transfer your image from local Docker registry to the global Docker registry. Do do so, tag your image and push it to docker.io:</p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">tag</span> <span class="n">mywebserver</span><span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span> <span class="n">docker</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">mywebserver</span><span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span> 
+<span class="n">docker</span> <span class="n">push</span> <span class="n">docker</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">mywebserver</span><span class="p">:</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>You can now stop your container (with the id of the container that was returned to you when you ran it)  </p>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">stop</span>  <span class="o">&lt;</span><span class="n">id</span> <span class="k">of</span> <span class="n">the</span> <span class="n">container</span><span class="o">&gt;</span>
+</pre></div>
+
+
+</li>
+</ol>
+<h2 id="follow-up-exercise-30-minutes">Follow up exercise (30 Minutes)</h2>
+<p>After you learned how to build, run and push a Docker image, try to build the same application you saw here in another programming language (preferrably Java).</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../prerequisites/" title="Prerequisites" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Prerequisites
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../kubernetes/" title="Kubernetes Lab" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Kubernetes Lab
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
