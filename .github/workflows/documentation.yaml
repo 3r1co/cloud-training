@@ -24,4 +24,4 @@ jobs:
     - name: Build the documentation
       run: mkdocs build
     - name: Commit to gh-pages
-      run: mkdocs gh-pages
+      run: mkdocs gh-deploy
