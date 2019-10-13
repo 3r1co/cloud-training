@@ -23,5 +23,9 @@ jobs:
         pip install mkdocs mkdocs-material
     - name: Build the documentation
       run: mkdocs build
-    - name: Commit to gh-pages
-      run: mkdocs gh-deploy
+    - name: Deploy Github Pages
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./site
