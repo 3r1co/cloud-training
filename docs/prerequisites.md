@@ -33,7 +33,6 @@ To perform this lab:
 
     -   As we are in a universtiy network, we need to configure docker engine in the virtual machine to perform outgoing internet connection through this proxy.
 
-        - The default proxy in Europe is "<isen-proxy-host>:<isen-proxy-port>"
         - Certain hosts do not need to be accessed through the proxy, which is configured through the "NO_PROXY" parameter. In our case, this is:  
 
             - localhost (127.0.0.1)
