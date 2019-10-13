@@ -1,0 +1,42 @@
+Mappings:
+  RegionMap:
+    ap-southeast-1:
+      AMI: ami-0e95b2e151e62f64c
+    eu-west-1:
+      AMI: ami-089a2a65371000190
+    us-east-1:
+      AMI: ami-06e619a8d6b783fa3
+Resources:
+  Ec2Instance:
+    Properties:
+      IamInstanceProfile: !ImportValue 'prgtrn-EC2GlobalRole'
+      ImageId: !FindInMap
+        - RegionMap
+        - !Ref 'AWS::Region'
+        - AMI
+      InstanceType: t1.micro
+      SecurityGroups:
+        - !ImportValue 'prgtrn-SSHSecurityGroupID'
+    Type: AWS::AutoScaling::LaunchConfiguration
+  myASG:
+    Properties:
+      AutoScalingGroupName: asg-ibs-d-ew1-prgtrn-emuellen
+      DesiredCapacity: '1'
+      HealthCheckGracePeriod: 300
+      HealthCheckType: ELB
+      LaunchConfigurationName: !Ref 'Ec2Instance'
+      MaxSize: 1
+      MinSize: 1
+      Tags:
+        - Key: gto:finops:projectcode
+          PropagateAtLaunch: true
+          Value: R0S28973
+        - Key: Name
+          PropagateAtLaunch: true
+          Value: asg-ibs-d-ew1-prgtrn-emuellen
+      VPCZoneIdentifier:
+        - !ImportValue 'prgtrn-PrivateSubnetAZa1Id'
+        - !ImportValue 'prgtrn-PrivateSubnetAZb1Id'
+        - !ImportValue 'prgtrn-PrivateSubnetAZc1Id'
+    Type: AWS::AutoScaling::AutoScalingGroup
+

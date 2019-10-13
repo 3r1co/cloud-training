@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'CloudFormation Skeleton'
+Metadata:
+  Instances:
+    Description: "The Metadata block is entirely optional."
+Parameters: 
+  InstanceTypeParameter: 
+    Type: String
+    Default: t2.micro
+    AllowedValues: 
+      - t2.micro
+      - m5.large
+    Description: Enter t2.micro or m5.large. Default is t2.micro.
+Mappings: 
+  RegionMap: 
+    us-east-1: 
+      "HVM64": "ami-06e619a8d6b783fa3"
+    eu-west-1: 
+      "HVM64": "ami-089a2a65371000190"
+    ap-southeast-1: 
+      "HVM64": "ami-0e95b2e151e62f64c"
+#Conditions: 
+Resources: 
+  EC2Instance: 
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", HVM64]
+      InstanceType: !Ref InstanceTypeParameter
+      SubnetId: !ImportValue "prgtrn-PrivateSubnetAZa1Id"
+      IamInstanceProfile: !ImportValue "prgtrn-EC2GlobalRole"
+      SecurityGroupIds:
+        - !ImportValue "prgtrn-SSHSecurityGroupID"
+      Tags:
+      - Key: "Name"
+        Value: "ec2-ibs-d-ew1-prgtrn-your-ldap"
+      - Key: "gto:finops:projectcode"
+        Value: "R0S28973" 
+
+Outputs:
+  InstanceID:
+    Description: "The Instance ID"
+    Value: !Ref EC2Instance
