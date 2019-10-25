@@ -10,5 +10,4 @@ First, make sure to have your environment properly set up:
 
 1. [Docker](./docker.md)
 1. [Kubernetes](./kubernetes.md)
-1. [Cloud Architecture](./cloud-architecture.md)
 1. [AWS](./aws.md)
