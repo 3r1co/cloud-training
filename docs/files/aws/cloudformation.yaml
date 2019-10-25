@@ -14,11 +14,11 @@ Parameters:
 Mappings: 
   RegionMap: 
     us-east-1: 
-      "HVM64": "ami-06e619a8d6b783fa3"
+      "HVM64": ""
     eu-west-1: 
-      "HVM64": "ami-089a2a65371000190"
+      "HVM64": ""
     ap-southeast-1: 
-      "HVM64": "ami-0e95b2e151e62f64c"
+      "HVM64": ""
 #Conditions: 
 Resources: 
   EC2Instance: 
@@ -26,15 +26,6 @@ Resources:
     Properties:
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", HVM64]
       InstanceType: !Ref InstanceTypeParameter
-      SubnetId: !ImportValue "prgtrn-PrivateSubnetAZa1Id"
-      IamInstanceProfile: !ImportValue "prgtrn-EC2GlobalRole"
-      SecurityGroupIds:
-        - !ImportValue "prgtrn-SSHSecurityGroupID"
-      Tags:
-      - Key: "Name"
-        Value: "ec2-ibs-d-ew1-prgtrn-your-ldap"
-      - Key: "gto:finops:projectcode"
-        Value: "R0S28973" 
 
 Outputs:
   InstanceID:
