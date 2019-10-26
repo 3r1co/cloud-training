@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM node:alpine
 
 LABEL maintainer "eric.muellenbach@yncrea.fr"
 
